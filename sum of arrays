@@ -1,0 +1,20 @@
+#include <stdio.h>
+int main(void) {
+  int i, n,sum=0;
+  int *a;
+  printf("Enter the size of the arrays");
+  scanf("%d", &n);
+  a = (int*)malloc(n * sizeof(int));
+  printf("Enter Elements ");
+  for (i = 0; i < n; i++)
+    {
+      scanf("%d", (a + i));
+    }
+  
+  for (i=0;i<n;i++) {
+    sum+=*(a+i);
+    
+  }
+  printf("%d",sum);
+  return 0;
+}
