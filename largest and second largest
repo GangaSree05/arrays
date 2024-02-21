@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main(void) {
+  int i, n,larg=0, sec=0;;
+  int *a;
+  printf("Enter the size of the arrays :");
+  scanf("%d", &n);
+  a = (int*)malloc(n * sizeof(int));
+  printf("Enter Elements ");
+  for (i = 0; i < n; i++)
+    {
+      scanf("%d", (a + i));
+    }
+  for (i = 0; i < n; i++){
+    if(larg<*(a+i)){
+      sec=larg;
+      larg=*(a+i);
+    }
+  }
+  printf( "Largest element is : %d\n",larg);
+  printf("second largest element is : %d",sec);
+  return 0;
+}
