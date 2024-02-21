@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main(void) {
+  int i, n,evenprt=1,oddprt=1;
+  int *a;
+  printf("Enter the size of the arrays :");
+  scanf("%d", &n);
+  a = (int*)malloc(n * sizeof(int));
+  printf("Enter Elements ");
+  for (i = 0; i < n; i++)
+    {
+      scanf("%d", (a + i));
+    }
+  for (i = 0; i < n; i++){
+    if(*(a+i)%2==0){
+      evenprt *= *(a+i);
+    }
+    else{
+      oddprt *= *(a+i);
+    }
+
+  }
+  printf("Even product is %d \n",evenprt);
+  printf("odd product is %d\n",oddprt);
+  return 0;
+}
